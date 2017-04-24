@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!
+  
   def new
-    @post = Post.new
+      @post = Post.new
   end
 
   def index
@@ -18,7 +20,7 @@ class PostsController < ApplicationController
       redirect_to post_path(@post)
     else
       flash[:error] = @post.errors.full_messages
-      rendirect_to new_post_path
+      redirect_to new_post_path
     end
   end
   
