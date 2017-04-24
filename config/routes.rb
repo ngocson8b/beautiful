@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'static_pages#home'
+  get 'static_pages/home'
   resources :posts
   devise_for :users
-
+  devise_scope :user do 
+    get '/users/sign_out' => 'devise/sessions#destroy'
+    get '/users/:id', :to => 'users#show', :as => :user
+  end
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
