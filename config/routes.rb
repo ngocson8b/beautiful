@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   root 'static_pages#home'
   get 'static_pages/home'
   resources :posts
@@ -8,7 +10,13 @@ Rails.application.routes.draw do
     get '/users/:id', :to => 'users#show', :as => :user
   end
   resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :post_comments
+  resources :relationships, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
