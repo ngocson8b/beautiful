@@ -1,3 +1,21 @@
 <%= image_tag(@post.image.url(:medium)) %>
 <br>
 <%= @post.description %>
+
+<%= form_for(@post_comment) do |f| %>
+    <div class= "field">
+        <%= f.label :comment %><br>
+        <%= f.text_field :comment %>
+        <%= f.hidden_field :post_id, :value => @post.id %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<ul>
+    <% @post.post_comment.each do |comment|%>
+    <li><%= comment.comment %>
+        (<i><%= comment.user_id%></i>)</li>
+    <% end %>
+</ul>

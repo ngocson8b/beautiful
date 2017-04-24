@@ -25,10 +25,12 @@ class PostCommentsController < ApplicationController
   # POST /post_comments.json
   def create
     @post_comment = PostComment.new(post_comment_params)
+    @post_comment.user_id = current_user.id
 
     respond_to do |format|
       if @post_comment.save
-        format.html { redirect_to @post_comment, notice: 'Post comment was successfully created.' }
+        url = "/posts/" + @post_comment.post_id.to_s
+        format.html { redirect_to url, notice: 'Post comment was successfully created.' }
         format.json { render :show, status: :created, location: @post_comment }
       else
         format.html { render :new }
