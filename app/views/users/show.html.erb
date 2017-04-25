@@ -1,5 +1,6 @@
 <h3><%=@user.email%></h3>
 <h4><%= @user_posts.size  %> posts</h4>	
+<h4><%=@user.followers.size%> followers | <%=@user.following.size%> followings</h4>
 
 <% if @user.id == current_user.id%>
 	<%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-default" %>

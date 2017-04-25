@@ -1,6 +1,7 @@
 <%= image_tag(@post.image.url(:medium)) %>
 <br>
-<%= @post.description %>
+<%= @post.description %><br>
+<%= @post.created_at%>
 
 <%= form_for(@post_comment) do |f| %>
     <div class= "field">
