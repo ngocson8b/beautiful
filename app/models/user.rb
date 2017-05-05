@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   
   # Follows a user.
@@ -32,7 +32,8 @@ class User < ActiveRecord::Base
   
   def feed
     following_ids = "SELECT followed_id FROM relationships WHERE follower_id = :user_id"
-    Post.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+    Post.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id).order('created_at DESC')
+    # Post.where("user_id = ?", id)
   end
 
 end
