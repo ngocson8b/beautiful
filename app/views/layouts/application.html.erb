@@ -34,6 +34,7 @@
                     <li>
                       <%= link_to "New Post", new_post_path %>
                     </li>
+                    <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
                     <li>
                       <%= link_to "Profile", user_path(current_user) %>
                     </li>
