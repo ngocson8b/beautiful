@@ -6,6 +6,7 @@
       Posted <%= time_ago_in_words(post.created_at) %> ago.
     </span>
   </div>
-  <span class="image"><%= image_tag(post.image.url(:medium)) %></span><br>
+  <span class="image">
+    <%= link_to image_tag(post.image.url(:medium), alt: "image", class: "img-responsive"), post_path(post) %></span><br>
   <span class="content"><%= post.description %></span>
 </li>
