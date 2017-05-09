@@ -1,25 +1,33 @@
-<h3><%=@user.email%></h3>
-<h4><%= @user_posts.size  %> posts</h4>	
-<h4><%=@user.followers.size%> followers | <%=@user.following.size%> followings</h4>
+<div class="info">
+	<div class="avatar">
+		<%= image_tag(current_user.avatar.url(:thumb)) %>
+	</div>
+	<div class="info-detail">
+		<div class="email"><%=@user.email%></div>
+		<div class="posts-num"><%= @user_posts.size %> posts</div>
+		<div class="followers-num"><%=@user.followers.size%> followers</div>
+		<div class="following-num"><%=@user.following.size%> followings</div>
+	</div>
+	<div class="config-btn">
+		<% if @user.id == current_user.id%>
+			<%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-default" %>
+		<% else %>
+			<% if current_user.following?(@user) %>
+		    <%= render 'unfollow' %>
+		  <% else %>
+		    <%= render 'follow' %>
+		  <% end %>
+		<% end %>
+	</div>
+</div>
 
-<% if @user.id == current_user.id%>
-	<%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-default" %>
-<% end %>
-<div class = "row">
-<% unless @user.id == current_user.id %>
-  <div id="follow_form">
-  <% if current_user.following?(@user) %>
-    <%= render 'unfollow' %>
-  <% else %>
-    <%= render 'follow' %>
-  <% end %>
-  </div>
-<% end %>
-    
-
-<% @user_posts.each do |x| %>
-    <div class="test col-md-4">
-        <%= link_to image_tag(x.image.url(:medium), alt: "image", class: "img-responsive"), post_path(x) %>
-    </div>
-<% end %>
+<div class="row posts-list">
+	<% @user_posts.each do |x| %>
+	    <div class="col-md-4">
+				<div class="thumbnail">
+					<%= link_to image_tag(x.image.url(:medium), alt: "image", class: "img-responsive", style: "width:100%") ,post_path(x) %>
+				</div>
+	    </div>
+	<% end %>
+</div>
 </div>

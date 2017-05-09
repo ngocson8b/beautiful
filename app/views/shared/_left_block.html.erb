@@ -1,0 +1,16 @@
+<div class="user_info">
+  <div class="header">
+  </div>
+  <div class="body">
+    <%= image_tag(current_user.avatar.url(:thumb)) %>
+    <h4 class="user-mail"><%= current_user.email%></h4>
+    <h4><%= current_user.followers.size%> followers | <%=current_user.following.size%> followings</h4>
+    <%= form_for @post, html: {multipart: true} do |f| %>
+        <%= f.file_field :image %>
+        <br>
+        <%= f.text_area :description %>
+        <br>
+        <%= f.submit "Post", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>
