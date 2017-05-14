@@ -34,6 +34,15 @@
                     <li>
                       <%= link_to "Profile", user_path(current_user) %>
                     </li>
+                    <li>
+                        <form class="navbar-form navbar-right" id="search-form" action="https://beautiful-sonvuhuu18.c9users.io/searches">
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="search-box" name="email" placeholder="Email or name..." autocomplete="off">
+                            </div>
+                            <button type="submit" class="btn btn-default">Search</button>
+                            <div id="result-box"></div>
+                        </form>
+                    </li>
                     <% else %>
                     <li>
                       <%= link_to "Login", new_user_session_path %>
@@ -42,7 +51,6 @@
                       <%= link_to "Register", new_user_registration_path %>
                     </li>
                     <% end %>
-                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -66,3 +74,20 @@
 </body>
 
 </html>
+
+<script>
+  $("#search-box").bind("keyup", function() {
+    var q = $("#search-box").val();
+    var user_id = $("#user_id").val();
+    if(q) {
+      var form = $("#search-form"); // grab the form wrapping the search bar.
+      var url = "/users/"+user_id+"/live_search"; // live_search action.   
+      var formData = form.serialize(); // grab the data in the form
+      console.log(q);
+      $.get(url, formData, function(response) { // perform an AJAX get
+      }); 
+    } else {
+      $("#result-box").css("display", "none");
+    }
+  });
+</script>

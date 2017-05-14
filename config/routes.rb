@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :searches
   get 'users/index'
 
   root 'static_pages#home'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   resources :users do
     member do
       get :following, :followers
+      get :live_search
     end
   end
   resources :post_comments
