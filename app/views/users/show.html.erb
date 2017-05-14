@@ -3,6 +3,7 @@
 		<%= image_tag(@user.avatar.url(:thumb)) %>
 	</div>
 	<div class="info-detail">
+		<div class="name"><%=@user.name%></div>
 		<div class="email"><%=@user.email%></div>
 		<div class="posts-num"><%= @user_posts.size %> posts</div>
 		<div class="followers-num"><%=@user.followers.size%> followers</div>
@@ -23,11 +24,11 @@
 
 <div class="row posts-list">
 	<% @user_posts.each do |x| %>
-	    <div class="col-md-4">
-				<div class="thumbnail">
-					<%= link_to image_tag(x.image.url(:medium), alt: "image", class: "img-responsive", style: "width:100%") ,post_path(x) %>
-				</div>
-	    </div>
+		<div class="square">
+			<div class="square-content">
+				<%= link_to image_tag(x.image.url(:medium), alt: "image") ,post_path(x) %>
+			</div>
+		</div>
 	<% end %>
 </div>
 </div>

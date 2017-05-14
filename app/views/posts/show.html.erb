@@ -17,6 +17,6 @@
 <ul>
     <% @post.post_comment.each do |comment|%>
     <li><%= comment.comment %>
-        (<i><%= comment.user_id%></i>)</li>
+        (<i><%= comment.user.name%></i>)</li>
     <% end %>
 </ul>
