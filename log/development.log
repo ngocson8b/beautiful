@@ -10327,3 +10327,1203 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 204ms (Views: 195.4ms | ActiveRecord: 2.2ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170418041743)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class DeviseCreateUsers < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418041743"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePosts (20170418045644)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreatePosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418045644"]]
+  [1m[35m (18.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentImageToPosts (20170418053335)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToPosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418053335"]]
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePostComments (20170418084635)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreatePostComments < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "post_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418084635"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToPosts (20170424175357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddUserIdToPosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170424175357"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRelationships (20170424194344)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateRelationships < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "relationships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_follower_id" ON "relationships" ("follower_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_followed_id" ON "relationships" ("followed_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_relationships_on_follower_id_and_followed_id" ON "relationships" ("follower_id", "followed_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170424194344"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAvatarsToUsers (20170505072221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAvatarsToUsers < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_size" integer[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170505072221"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToUsers (20170514142042)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170514142042"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSearches (20170514152749)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170514152749"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-15 13:25:58 UTC], ["updated_at", 2017-05-15 13:25:58 UTC]]
+  [1m[35m (24.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id_and_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id_and_followed_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "son.vuhuu18@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "son.vuhuu18@gmail.com"], ["encrypted_password", "$2a$11$Qv.SeRcIx9HoauIqCPLs0OIBkEJAjb70gVbJ0jUjEjM7tKEP8oGH."], ["created_at", 2017-05-15 13:26:06 UTC], ["updated_at", 2017-05-15 13:26:06 UTC], ["name", "Son Vu"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "son.vuhuu18@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170418041743)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class DeviseCreateUsers < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418041743"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePosts (20170418045644)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreatePosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418045644"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentImageToPosts (20170418053335)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToPosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418053335"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePostComments (20170418084635)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreatePostComments < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "post_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418084635"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToPosts (20170424175357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddUserIdToPosts < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170424175357"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRelationships (20170424194344)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateRelationships < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "relationships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "followed_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_follower_id" ON "relationships" ("follower_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_followed_id" ON "relationships" ("followed_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_relationships_on_follower_id_and_followed_id" ON "relationships" ("follower_id", "followed_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170424194344"]]
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAvatarsToUsers (20170505072221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAvatarsToUsers < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_name" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_content_type" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170505072221"]]
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToUsers (20170514142042)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170514142042"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSearches (20170514152749)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170514152749"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-15 13:27:24 UTC], ["updated_at", 2017-05-15 13:27:24 UTC]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id_and_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id_and_followed_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_followed_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relationships_on_follower_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "son.vuhuu18@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "son.vuhuu18@gmail.com"], ["encrypted_password", "$2a$11$m/D4mBuxfiCCMy1vvoe7iuhaSOYW0UEuNOjD35jc2W81ul4zSw1RC"], ["created_at", 2017-05-15 13:27:30 UTC], ["updated_at", 2017-05-15 13:27:30 UTC], ["name", "Son Vu"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-1@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-1@railstutorial.org"], ["encrypted_password", "$2a$11$hmN.jYdacT9dTzROnbxlk.MO8/xnurdHq0vVwA/amSifLf28.0wVu"], ["created_at", 2017-05-15 13:27:32 UTC], ["updated_at", 2017-05-15 13:27:32 UTC], ["name", "Augustus Jenkins DDS"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-2@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-2@railstutorial.org"], ["encrypted_password", "$2a$11$THBsY08zZrMod3rjCtn/GODNpZcSDsamv8bEdwTmlsSHCoHSK5b8u"], ["created_at", 2017-05-15 13:27:32 UTC], ["updated_at", 2017-05-15 13:27:32 UTC], ["name", "Jasen Lebsack"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-3@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-3@railstutorial.org"], ["encrypted_password", "$2a$11$ql91WQ5Btp0ucoA9IN.euuIpsQowxrkADxMrtM4zCsSoB4gSBiWZO"], ["created_at", 2017-05-15 13:27:32 UTC], ["updated_at", 2017-05-15 13:27:32 UTC], ["name", "Enoch Marks"]]
+  [1m[35m (78.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-4@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-4@railstutorial.org"], ["encrypted_password", "$2a$11$1VW3tT2YXsAT8JUvUaTu/.nUw2RyW8C934OwYwONV2TO6Xq16Rrc."], ["created_at", 2017-05-15 13:27:32 UTC], ["updated_at", 2017-05-15 13:27:32 UTC], ["name", "Marshall Lebsack"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-5@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-5@railstutorial.org"], ["encrypted_password", "$2a$11$5kNasDVBVz5jOJjZF1jHQOuCx3bK7VQqF9BT0r5UEABGF2jQ6Fkke"], ["created_at", 2017-05-15 13:27:32 UTC], ["updated_at", 2017-05-15 13:27:32 UTC], ["name", "Jeremy Bogan"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-6@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-6@railstutorial.org"], ["encrypted_password", "$2a$11$jfO6xeMblqPLy/WZxh0r7.HVmcxphYGS/a7L.lMmdvZzDkh9A6BU."], ["created_at", 2017-05-15 13:27:32 UTC], ["updated_at", 2017-05-15 13:27:32 UTC], ["name", "Elyse Cruickshank"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-7@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-7@railstutorial.org"], ["encrypted_password", "$2a$11$Dm5Fwj8VZrOh5npaT7tAreE.j7IIkPNjlgU0AoVATvfsvVwdi4qZS"], ["created_at", 2017-05-15 13:27:33 UTC], ["updated_at", 2017-05-15 13:27:33 UTC], ["name", "Mr. Dena Schroeder"]]
+  [1m[35m (55.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-8@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-8@railstutorial.org"], ["encrypted_password", "$2a$11$x989E4C2LdBaZ5OsHO9ZpulHA5bSLPV/wkkRNH53L2um18YSVegyO"], ["created_at", 2017-05-15 13:27:33 UTC], ["updated_at", 2017-05-15 13:27:33 UTC], ["name", "Leone Leannon"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-9@railstutorial.org"], ["encrypted_password", "$2a$11$0dhAd.LtbBIgB/UesBpHE.P7UweWC.YiAaudENLjmaumBb3mungoW"], ["created_at", 2017-05-15 13:27:33 UTC], ["updated_at", 2017-05-15 13:27:33 UTC], ["name", "Karianne Zemlak"]]
+  [1m[35m (117.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-10@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-10@railstutorial.org"], ["encrypted_password", "$2a$11$/sLHyKvq18vhR1gql5aTReQV6acCAGO0WC24ZytJurZMjPvq9B9MS"], ["created_at", 2017-05-15 13:27:33 UTC], ["updated_at", 2017-05-15 13:27:33 UTC], ["name", "Mrs. Mozell Adams"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-11@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-11@railstutorial.org"], ["encrypted_password", "$2a$11$lF35uW1OewEbWFBizklStuj26RrSmHoqMBNDflbhk3TLtAO/1yJ9O"], ["created_at", 2017-05-15 13:27:33 UTC], ["updated_at", 2017-05-15 13:27:33 UTC], ["name", "Jamarcus Gusikowski"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-12@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-12@railstutorial.org"], ["encrypted_password", "$2a$11$8XI1vJUK4HNUf9lcOnkVj.lzMJvb9oLUa8G9DuKamXEwL6GC/WMPu"], ["created_at", 2017-05-15 13:27:34 UTC], ["updated_at", 2017-05-15 13:27:34 UTC], ["name", "Domenic Howe"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-13@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-13@railstutorial.org"], ["encrypted_password", "$2a$11$R5LsPeHpWCYQJx9YGIIHW.KpiyJdoB8rBrlTUA5s.yhkhBIjCmEAG"], ["created_at", 2017-05-15 13:27:34 UTC], ["updated_at", 2017-05-15 13:27:34 UTC], ["name", "Miss Lacy Collier"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-14@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-14@railstutorial.org"], ["encrypted_password", "$2a$11$awyrpgGeGLindMZCFZqc/uDfQKFd4G4WTScBIdVBmwr1y/DOxdK2."], ["created_at", 2017-05-15 13:27:34 UTC], ["updated_at", 2017-05-15 13:27:34 UTC], ["name", "Mr. Norwood Schmidt"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-15@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-15@railstutorial.org"], ["encrypted_password", "$2a$11$n8GdOtPzjdTgqi1qF7hGDOoY5pumwNVBXvekop9n.7cIjOrRxWEYe"], ["created_at", 2017-05-15 13:27:34 UTC], ["updated_at", 2017-05-15 13:27:34 UTC], ["name", "Erik Mills"]]
+  [1m[35m (241.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-16@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-16@railstutorial.org"], ["encrypted_password", "$2a$11$QwSLmKYKkDkWAcCtkARBMuh.S8PmrF9f.yrneELyC5kR4dvLMxhGm"], ["created_at", 2017-05-15 13:27:34 UTC], ["updated_at", 2017-05-15 13:27:34 UTC], ["name", "Darrel Block"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-17@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-17@railstutorial.org"], ["encrypted_password", "$2a$11$vfgKWpvoKMqFlh9aiurIFeZv00Vmz4j3z73mOdbtp21w2QhztG6AW"], ["created_at", 2017-05-15 13:27:35 UTC], ["updated_at", 2017-05-15 13:27:35 UTC], ["name", "Leslie Klocko"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-18@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-18@railstutorial.org"], ["encrypted_password", "$2a$11$sckB9Mv76Q84r.5uz9D8F.RtQGITEsINtUzWF8BE6ZAvgooPc3QVy"], ["created_at", 2017-05-15 13:27:35 UTC], ["updated_at", 2017-05-15 13:27:35 UTC], ["name", "Lorenzo Stamm DDS"]]
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-19@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-19@railstutorial.org"], ["encrypted_password", "$2a$11$2T5J1QqpvG30fqk/OU9.DOnzSO9gWCtABtEYcN9ENwfhOd4eGwwcW"], ["created_at", 2017-05-15 13:27:35 UTC], ["updated_at", 2017-05-15 13:27:35 UTC], ["name", "Antonetta Reilly"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-20@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-20@railstutorial.org"], ["encrypted_password", "$2a$11$Jv78QvQACmolKZKRtmq3Ren6Le8ZQQefeIdWIbFEW4qq.DjTRWxqm"], ["created_at", 2017-05-15 13:27:35 UTC], ["updated_at", 2017-05-15 13:27:35 UTC], ["name", "Carole Corkery"]]
+  [1m[35m (138.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-21@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-21@railstutorial.org"], ["encrypted_password", "$2a$11$xaoXCRr1JcGQfi6npnisW.50sg1.T.SoeRYaxnTgd5SZMdtR7rQue"], ["created_at", 2017-05-15 13:27:35 UTC], ["updated_at", 2017-05-15 13:27:35 UTC], ["name", "Mrs. Emmie Borer"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-22@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-22@railstutorial.org"], ["encrypted_password", "$2a$11$LxisKvvxubo2i7v3YUk1MuMFb4B.OsbdzaLJxuaU/3vPKOPQAcQo2"], ["created_at", 2017-05-15 13:27:35 UTC], ["updated_at", 2017-05-15 13:27:35 UTC], ["name", "Fern Schmeler"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-23@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-23@railstutorial.org"], ["encrypted_password", "$2a$11$flGY1WXZDSevaMUHS1ivfu4f3QYTKHyjhLdrfgjvEkCqYk/AuiyuC"], ["created_at", 2017-05-15 13:27:36 UTC], ["updated_at", 2017-05-15 13:27:36 UTC], ["name", "Stacy Ward"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-24@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-24@railstutorial.org"], ["encrypted_password", "$2a$11$0.R1ho0MRK1kwzMpac6cbOtWEw21.5LC9DIx1XQqmyLlYFj/6F9Ze"], ["created_at", 2017-05-15 13:27:36 UTC], ["updated_at", 2017-05-15 13:27:36 UTC], ["name", "Katelin Harris MD"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-25@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-25@railstutorial.org"], ["encrypted_password", "$2a$11$nhIilI8cmQg2QlGvXBHHtOUVqW1VHnQcPe6BvF9SAQh8rBfoYtq/q"], ["created_at", 2017-05-15 13:27:36 UTC], ["updated_at", 2017-05-15 13:27:36 UTC], ["name", "Cloyd Konopelski V"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-26@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-26@railstutorial.org"], ["encrypted_password", "$2a$11$ijKGRXa3zbuZY0kBgRb88O7OiKq8qyw4VkeObt.ja0W4qYFBHzG1m"], ["created_at", 2017-05-15 13:27:36 UTC], ["updated_at", 2017-05-15 13:27:36 UTC], ["name", "Ernestina Macejkovic"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-27@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-27@railstutorial.org"], ["encrypted_password", "$2a$11$xqMCtYbwn5I8Yj4ZBZeIeubpVaNYCkrPj5XGLI.qCMo4JvRvocbDe"], ["created_at", 2017-05-15 13:27:36 UTC], ["updated_at", 2017-05-15 13:27:36 UTC], ["name", "Will Rodriguez"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-28@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-28@railstutorial.org"], ["encrypted_password", "$2a$11$0lg5cVv1IVZX6P5RD7Hg3OxbHJgxYmkG1XQj/2Z3xD60xdhJ3cg/G"], ["created_at", 2017-05-15 13:27:36 UTC], ["updated_at", 2017-05-15 13:27:36 UTC], ["name", "Raphael Cummerata"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-29@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-29@railstutorial.org"], ["encrypted_password", "$2a$11$S9np/xpIUqXCPuBmH6K5BeYk537THtpNk9eVrgL55j7wEKz8UQ1ge"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Keyon Frami III"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-30@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-30@railstutorial.org"], ["encrypted_password", "$2a$11$UMVR95UjaUQNHeDT8Iz.UeZisChFNLrHI6NZSKRApzZ37CBUj6Qdm"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Robyn Ruecker"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-31@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-31@railstutorial.org"], ["encrypted_password", "$2a$11$vmXoWTitUyjXZyw0wvUa2O/Ys8MbQmDo08fDGp1qKbexotbeF0tvG"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Desiree Williamson"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-32@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-32@railstutorial.org"], ["encrypted_password", "$2a$11$yQFSDbiRHcZ9m4yVuLxHTevElq5S43bq2Xdw3pshtjWtVgHxRXFB6"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Clint Monahan"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-33@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-33@railstutorial.org"], ["encrypted_password", "$2a$11$s2VZgR7Ns2yM/9pjQk8J8eTczgPLdUK1r5i1b4Bb.l.OE2XUDqmjO"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Giovani Reichel"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-34@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-34@railstutorial.org"], ["encrypted_password", "$2a$11$o/rZo8kZMTvt4cmXHDkKNO.Y835e8BbX2DO1D27eFctfCcwE7aRBm"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Trisha Schaefer"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-35@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-35@railstutorial.org"], ["encrypted_password", "$2a$11$mPI3.K2QVScO3g4lxn6FYeWO0kP1v8zmZjsH0EOK.NiPx/Cz39RG2"], ["created_at", 2017-05-15 13:27:37 UTC], ["updated_at", 2017-05-15 13:27:37 UTC], ["name", "Cara Grimes"]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-36@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-36@railstutorial.org"], ["encrypted_password", "$2a$11$nZyvuQjghsSu9x0tslheq.qFht3ewhNH7u/4za1YMPkFy3yiHvdzG"], ["created_at", 2017-05-15 13:27:38 UTC], ["updated_at", 2017-05-15 13:27:38 UTC], ["name", "Mrs. Sigrid Kulas"]]
+  [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-37@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-37@railstutorial.org"], ["encrypted_password", "$2a$11$9XySMVzEgXXpNl51hpB9jOWnOKbztwOHr5kZlRGypeGv.L.RSX/Fa"], ["created_at", 2017-05-15 13:27:38 UTC], ["updated_at", 2017-05-15 13:27:38 UTC], ["name", "Harold Halvorson"]]
+  [1m[35m (16.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-38@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-38@railstutorial.org"], ["encrypted_password", "$2a$11$2Fx0k1aDFG8kNGjf.VihyurJRHU1foX60RHOQxUF/RGB0m47DV85."], ["created_at", 2017-05-15 13:27:38 UTC], ["updated_at", 2017-05-15 13:27:38 UTC], ["name", "Dr. Rollin Brekke"]]
+  [1m[35m (20.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-39@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-39@railstutorial.org"], ["encrypted_password", "$2a$11$NivzX3rCGDM49zeLRbvmkOprokTmF.UHTuA2GAOhtyRMubULTS3Ty"], ["created_at", 2017-05-15 13:27:38 UTC], ["updated_at", 2017-05-15 13:27:38 UTC], ["name", "Dr. Nathen Abshire"]]
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-40@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-40@railstutorial.org"], ["encrypted_password", "$2a$11$WdAbTQnV95FctmMSj5PrlOfVRJR2Q3lnBPfJ1oGZjvfUg5lGMTa82"], ["created_at", 2017-05-15 13:27:38 UTC], ["updated_at", 2017-05-15 13:27:38 UTC], ["name", "Terrell Cummerata"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-41@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-41@railstutorial.org"], ["encrypted_password", "$2a$11$SdLhaAXAYkZfLV6Dkez4T.qOgvIitXyIPD7bGmrqaHaCijx64ZXSu"], ["created_at", 2017-05-15 13:27:38 UTC], ["updated_at", 2017-05-15 13:27:38 UTC], ["name", "Anabel Rempel"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-42@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-42@railstutorial.org"], ["encrypted_password", "$2a$11$RktyX71sUUxM9WZfwC981OhejDrJhla0/ZJK5Ig5kKTDLjvlwKaNq"], ["created_at", 2017-05-15 13:27:39 UTC], ["updated_at", 2017-05-15 13:27:39 UTC], ["name", "Mr. Lavon D'Amore"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-43@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-43@railstutorial.org"], ["encrypted_password", "$2a$11$U4PxPfcZ6THm/dgUVQkZqOLAZYqS9QxOozcfxBz.sCdRfeA/r7Kni"], ["created_at", 2017-05-15 13:27:39 UTC], ["updated_at", 2017-05-15 13:27:39 UTC], ["name", "Dagmar Leannon"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-44@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-44@railstutorial.org"], ["encrypted_password", "$2a$11$jZqejorzJuUcC3mDSqrZZu873/1KtKSvEVPvPWys5Iee.bdSzditm"], ["created_at", 2017-05-15 13:27:39 UTC], ["updated_at", 2017-05-15 13:27:39 UTC], ["name", "Josefina Simonis"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-45@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-45@railstutorial.org"], ["encrypted_password", "$2a$11$OIpf2bA5kpJLEsU6ORdeVObbAzo3LYBh5kuG3mlEZdLWgwT.LP2XK"], ["created_at", 2017-05-15 13:27:39 UTC], ["updated_at", 2017-05-15 13:27:39 UTC], ["name", "Hillard Gottlieb"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-46@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-46@railstutorial.org"], ["encrypted_password", "$2a$11$heKpeSdiRPEN5WDFMLHMlOvku/3.ufW.9SJn.W7nFDNXIooqcRU/y"], ["created_at", 2017-05-15 13:27:39 UTC], ["updated_at", 2017-05-15 13:27:39 UTC], ["name", "Julio Homenick"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-47@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-47@railstutorial.org"], ["encrypted_password", "$2a$11$ZuCo8bJagbzbrDU7iW7IKeQUsfV0NfHAi2I0AkyvZpD0bJo1kQOy6"], ["created_at", 2017-05-15 13:27:39 UTC], ["updated_at", 2017-05-15 13:27:39 UTC], ["name", "Ms. Gus Hauck"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-48@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-48@railstutorial.org"], ["encrypted_password", "$2a$11$Kf3/ldBhotguaWz0QbVhreTMa2c7u7goCk2jyz40lRGiR3.JLSUU6"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Bernadette Bahringer"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-49@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-49@railstutorial.org"], ["encrypted_password", "$2a$11$tIIN221VfKPwni6NRDoGZeW/ektAEGo88Wt5RJoMzRtAwrBDRu4YG"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Jessyca Ondricka"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-50@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-50@railstutorial.org"], ["encrypted_password", "$2a$11$vbhXxfvFZ6CtOjEGiUXI2uBeGxgllYTZCAu1qDgP56z2xVIHMkpqi"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Mikel Wilderman"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-51@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-51@railstutorial.org"], ["encrypted_password", "$2a$11$YRjAobZiWMgqVytGSU6KFuOZJcewVj0yJyWAAy9CtHSLqSje4wLHG"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Jerry Hahn"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-52@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-52@railstutorial.org"], ["encrypted_password", "$2a$11$fMbewQqdIHN2VChrYepFfuk4JNsQKrPWCEBpiw93EfaOaKHxptOLy"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Isaias Ullrich"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-53@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-53@railstutorial.org"], ["encrypted_password", "$2a$11$YC.RIK6yZbG.1uY1LhgXKelNiEBQvIOgWcmZXb0VWrbr3ZDGBjMPe"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Freeda Nitzsche"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-54@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-54@railstutorial.org"], ["encrypted_password", "$2a$11$K9oLsa0Zb2RqKf93BuLxT.HLCL2PuNIbdSwSsuqVW83STh2kPT.9u"], ["created_at", 2017-05-15 13:27:40 UTC], ["updated_at", 2017-05-15 13:27:40 UTC], ["name", "Peggie Gaylord III"]]
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-55@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-55@railstutorial.org"], ["encrypted_password", "$2a$11$.p4TSNacYpqGWZ5XmtqqY.MWLOffqd5lXzMVo7MBBhWcYQVtbOIsa"], ["created_at", 2017-05-15 13:27:41 UTC], ["updated_at", 2017-05-15 13:27:41 UTC], ["name", "Monica Mills"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-56@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-56@railstutorial.org"], ["encrypted_password", "$2a$11$eI/PsOgyFzBPCvLg6R1n..c8pBpDkddSfS7u2/hpE.ack1Y.RYmjS"], ["created_at", 2017-05-15 13:27:41 UTC], ["updated_at", 2017-05-15 13:27:41 UTC], ["name", "Ms. Stuart Mante"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-57@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-57@railstutorial.org"], ["encrypted_password", "$2a$11$l2Vxiz6uqQXIlBiq7GaC.u68fWV3CAco/hBDQ4zKLQNehbqRVrWfq"], ["created_at", 2017-05-15 13:27:41 UTC], ["updated_at", 2017-05-15 13:27:41 UTC], ["name", "Chelsea Davis"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-58@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-58@railstutorial.org"], ["encrypted_password", "$2a$11$pl843fzKUuGZC6gq7wBL9uvBRzLKTBtYHsUUuSONk2fTdJ2GxtbBy"], ["created_at", 2017-05-15 13:27:41 UTC], ["updated_at", 2017-05-15 13:27:41 UTC], ["name", "Fredrick Hilpert"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-59@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-59@railstutorial.org"], ["encrypted_password", "$2a$11$Opd7Bsf0KU9.eu/YibPH/edjzbb2cr9Lb0DxHmOAKJlwPt2gRM40C"], ["created_at", 2017-05-15 13:27:41 UTC], ["updated_at", 2017-05-15 13:27:41 UTC], ["name", "Ms. Dean Wiegand"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-60@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-60@railstutorial.org"], ["encrypted_password", "$2a$11$sor0YoPrKoUwS60TeAOB6esz7MZ8MW7D9eMPj8W82nJCMVH7u/WZW"], ["created_at", 2017-05-15 13:27:41 UTC], ["updated_at", 2017-05-15 13:27:41 UTC], ["name", "Daren Bartell"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-61@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-61@railstutorial.org"], ["encrypted_password", "$2a$11$w/66T64xybXHl3rSMXop1OOmaHCwTg46JEWtq.EzAKbU8sqrfs9yK"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Maude Schamberger"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-62@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-62@railstutorial.org"], ["encrypted_password", "$2a$11$bnfGXM4mTlpEZyGi.G/sMeqF.22qw9kchTNz6eglyeykdiUhW4tfO"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Miss Frida Rippin"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-63@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-63@railstutorial.org"], ["encrypted_password", "$2a$11$D6RiN9kMPravx31GTEr29eOn27tvqL0BGYPgzxsiTCuBcCLNpyglC"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Hilario Donnelly III"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-64@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-64@railstutorial.org"], ["encrypted_password", "$2a$11$usdnn5mO/91l4vljK8Od9eNlY48tF8QymXnw6PgF97hHgL888Vdn6"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Sheila Towne"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-65@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-65@railstutorial.org"], ["encrypted_password", "$2a$11$PAvwzGiVJAw8FAlTsSCTn.Dtfj.5RJ6jOVonHkF0dlA4UCzRBj.kG"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Conor West I"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-66@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-66@railstutorial.org"], ["encrypted_password", "$2a$11$5Ez8Jvh2x1OI7ddmAsku.uwDartVsyTg9.X7GQvys.jbMmklqTMAe"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Elmore Smith Jr."]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-67@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-67@railstutorial.org"], ["encrypted_password", "$2a$11$du7p/Lz4Rc3XJwwRO/H3PeSdFw09VVtcx7r3mkAankCAKuXNAGEce"], ["created_at", 2017-05-15 13:27:42 UTC], ["updated_at", 2017-05-15 13:27:42 UTC], ["name", "Dr. Percy Kunze"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-68@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-68@railstutorial.org"], ["encrypted_password", "$2a$11$gkGXwUeHKddm49wJCLzbgO5xhOxu/J1SZyCh9cCxFXb7nZOZZ/yIW"], ["created_at", 2017-05-15 13:27:43 UTC], ["updated_at", 2017-05-15 13:27:43 UTC], ["name", "Shanel Kessler"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-69@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-69@railstutorial.org"], ["encrypted_password", "$2a$11$F4IZAtdi2U.Vr5EX38s0CeI9mUTLwYoGpH/sA9mncl6/jcgvsfLMS"], ["created_at", 2017-05-15 13:27:43 UTC], ["updated_at", 2017-05-15 13:27:43 UTC], ["name", "Cecelia Kilback MD"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-70@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-70@railstutorial.org"], ["encrypted_password", "$2a$11$eRpiep6wMFKaP6G1DXTMgeA4XbEEwuTsWeMbSgAVfwDu34oTmpxom"], ["created_at", 2017-05-15 13:27:43 UTC], ["updated_at", 2017-05-15 13:27:43 UTC], ["name", "Gene Howe"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-71@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-71@railstutorial.org"], ["encrypted_password", "$2a$11$ZLE/JmfZxA4GdBegS3XUjuTk4VcamBYAwBEvoyUf5JtKDha2G6F3e"], ["created_at", 2017-05-15 13:27:43 UTC], ["updated_at", 2017-05-15 13:27:43 UTC], ["name", "Susie Jast"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-72@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-72@railstutorial.org"], ["encrypted_password", "$2a$11$tjGKA0FNpiZtzXt4bDD9a.9gm0X3V9HPcOtaJhS8rXdwOIdzmP7e."], ["created_at", 2017-05-15 13:27:43 UTC], ["updated_at", 2017-05-15 13:27:43 UTC], ["name", "Rodger Daniel"]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-73@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-73@railstutorial.org"], ["encrypted_password", "$2a$11$auxb29zw8LxcRT.epz969.O5oOhfNw56l6rHZMBW6s1D.ktfBfe46"], ["created_at", 2017-05-15 13:27:43 UTC], ["updated_at", 2017-05-15 13:27:43 UTC], ["name", "Geovanny Mayert III"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-74@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-74@railstutorial.org"], ["encrypted_password", "$2a$11$urjInvPAW1JAImDIPPa9A.gBTIWBYAKlmYPjIFpjM6CrrtIZ3GdT6"], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Dr. Jacey Johnson"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-75@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-75@railstutorial.org"], ["encrypted_password", "$2a$11$TkZ4yTVxvEr6jWT2qFyKD.7sk0oQ40Dibo/0UqB3lYojIEQcM/BJK"], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Ara Barrows"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-76@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-76@railstutorial.org"], ["encrypted_password", "$2a$11$gJGQXV9P8edh7jQRdpa4TOpJUhwax4XUB80PFRKIzT1kEvZYCRfqu"], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Mrs. Paul Mitchell"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-77@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-77@railstutorial.org"], ["encrypted_password", "$2a$11$hr5Yyx00p65jqpD6ebKavevwKB2GHR1aBgJOqAtDrJ9f514GeK62."], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Stanley Hammes"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-78@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-78@railstutorial.org"], ["encrypted_password", "$2a$11$QleWthJzdwDK65/Ru5u0/uLvaXfFPeMJ3SLWGk/wXacBl65pTp886"], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Alexanne Thiel"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-79@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-79@railstutorial.org"], ["encrypted_password", "$2a$11$wcXfczv/awQkecNCMz8DB.SuB4ARSwg9KdLjLTTm0V9X0vC4LxyU2"], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Jerrell Feil"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-80@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-80@railstutorial.org"], ["encrypted_password", "$2a$11$eJDKL1KWIfkWF2TuqQsjuec/fUWsCzI2Xy9x541d2Yg2gx8AousVa"], ["created_at", 2017-05-15 13:27:44 UTC], ["updated_at", 2017-05-15 13:27:44 UTC], ["name", "Declan Kihn"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-81@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-81@railstutorial.org"], ["encrypted_password", "$2a$11$.MsCDyNr./nh7bnAv8mRBupvTznaEccw9qysPMIePnU86zBiRIUIS"], ["created_at", 2017-05-15 13:27:45 UTC], ["updated_at", 2017-05-15 13:27:45 UTC], ["name", "Lauren Green"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-82@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-82@railstutorial.org"], ["encrypted_password", "$2a$11$oLyR4F8ewNjcsrLaXV.EYOYZeJLXjHLScFVIahmbGiBRVsNNZPvhG"], ["created_at", 2017-05-15 13:27:45 UTC], ["updated_at", 2017-05-15 13:27:45 UTC], ["name", "Dina Wisoky I"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-83@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-83@railstutorial.org"], ["encrypted_password", "$2a$11$rQm3Oo8xZ052OtRr7.sRZ.IjtNejsIZEyU2IbNQehVdl9Cj1EYYja"], ["created_at", 2017-05-15 13:27:45 UTC], ["updated_at", 2017-05-15 13:27:45 UTC], ["name", "Vivien Koepp I"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-84@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-84@railstutorial.org"], ["encrypted_password", "$2a$11$Ij1mxYqZiMxWXS8lirLwAO2k0.K6IHJXnKmO7gXEhAt61UyQ4p0Ny"], ["created_at", 2017-05-15 13:27:45 UTC], ["updated_at", 2017-05-15 13:27:45 UTC], ["name", "Mrs. Stewart Kling"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-85@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-85@railstutorial.org"], ["encrypted_password", "$2a$11$R2H6MCNtiDAQOkvlJhp6u.rVhvO6W3MOAnSUtgiKpLkQt0PR5zRaS"], ["created_at", 2017-05-15 13:27:45 UTC], ["updated_at", 2017-05-15 13:27:45 UTC], ["name", "Ayla Veum"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-86@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-86@railstutorial.org"], ["encrypted_password", "$2a$11$SQVGP22jIMZFUq.yVX5HweW0jXnhsjHXcAc5.iApNxqo5iepP.EMi"], ["created_at", 2017-05-15 13:27:45 UTC], ["updated_at", 2017-05-15 13:27:45 UTC], ["name", "Rex Sawayn"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-87@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-87@railstutorial.org"], ["encrypted_password", "$2a$11$hUCGQUwFigkm56tt4.8qh.yVmNpU6NFSCYGaFBefBSkjd7ci4H72y"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Abbie Sporer DDS"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-88@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-88@railstutorial.org"], ["encrypted_password", "$2a$11$lRDqAEtQy9pdYLXqpqIlSe790BciCcXWmP6/eaKsTaKLjDRhmRhgm"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Salvatore Strosin"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-89@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-89@railstutorial.org"], ["encrypted_password", "$2a$11$PE4pRpn1TcmrEB2S8RMO..aPmpCwbbqUQlk7ZeRoBcr7Pw7GRlT.y"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Lyda Marks"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-90@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-90@railstutorial.org"], ["encrypted_password", "$2a$11$bkrVQRUaMpwP0qA0.bSDneqbOpev4OPtnSbYyGCq5PCRimXhDIkiu"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Caleb Gleichner"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-91@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-91@railstutorial.org"], ["encrypted_password", "$2a$11$bLjRggdnoFmfasb3s4y1tuehPFttldac7jACGhLNwYPIdMBq/TWr6"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Velma Kuhn"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-92@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-92@railstutorial.org"], ["encrypted_password", "$2a$11$uE65DULCVqD0vY2B/CCaeO/N1Ndp22d2jSz7nyQ63Wy.eeF..M3Oe"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Bruce Harvey"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-93@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-93@railstutorial.org"], ["encrypted_password", "$2a$11$/wNrzZuhUiCEFw8jr3QoI..j/nK5KfDwrG5wg2Ley9MtnkxzG.0ie"], ["created_at", 2017-05-15 13:27:46 UTC], ["updated_at", 2017-05-15 13:27:46 UTC], ["name", "Ida Herman"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-94@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-94@railstutorial.org"], ["encrypted_password", "$2a$11$y2sZh2nAQxQck/FVBIJCc./oE183GlcbYdnbqhntEQK/tOUkZG1CS"], ["created_at", 2017-05-15 13:27:47 UTC], ["updated_at", 2017-05-15 13:27:47 UTC], ["name", "Quincy Sporer"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-95@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-95@railstutorial.org"], ["encrypted_password", "$2a$11$ThccratI7tsauiecYhPX4uZD/SzionQiY3Ntzp7yonKtrwXwC4aLa"], ["created_at", 2017-05-15 13:27:47 UTC], ["updated_at", 2017-05-15 13:27:47 UTC], ["name", "Ara McKenzie"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-96@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-96@railstutorial.org"], ["encrypted_password", "$2a$11$lSdzVaRbis.yQv0qMALlZulwrM8TN/LAwPCDn9kchWyW5aSYFzjsq"], ["created_at", 2017-05-15 13:27:47 UTC], ["updated_at", 2017-05-15 13:27:47 UTC], ["name", "Larissa Stroman"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-97@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-97@railstutorial.org"], ["encrypted_password", "$2a$11$gnFUT/KAnajScGCbL4D09.BGNq.pKKzuy9MhpQMgp.5YEIi9qHz.e"], ["created_at", 2017-05-15 13:27:47 UTC], ["updated_at", 2017-05-15 13:27:47 UTC], ["name", "Miss Russel Rippin"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-98@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-98@railstutorial.org"], ["encrypted_password", "$2a$11$ylADIAb2N0YmVCBPqE4dw.zW/5jssDdPsRFkU182yImkw6yQ7a9dW"], ["created_at", 2017-05-15 13:27:47 UTC], ["updated_at", 2017-05-15 13:27:47 UTC], ["name", "Angelo Waelchi"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-99@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "example-99@railstutorial.org"], ["encrypted_password", "$2a$11$3VYjTk0pv.auCfstq85EmeIAnFPh5OjF8s6QrnVSqS5.Tmo95YB9K"], ["created_at", 2017-05-15 13:27:47 UTC], ["updated_at", 2017-05-15 13:27:47 UTC], ["name", "Willis Parisian II"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:28:05 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/ubuntu/workspace/app/controllers/application_controller.rb:5)
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 768ms (Views: 738.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 113.23.53.204 at 2017-05-15 13:28:08 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (860.2ms)
+Completed 200 OK in 999ms (Views: 971.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 113.23.53.204 at 2017-05-15 13:28:10 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ALJKMoBquyEp8QiTa/MNLvdy4WmB+qpEJfBTL6/aLz774SfZNVu0ufbGI57a8VCkkdE4qGbbyXzjfKNGdfm7A==", "user"=>{"email"=>"son.vuhuu18@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "son.vuhuu18@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-15 13:28:11 UTC], ["last_sign_in_at", 2017-05-15 13:28:11 UTC], ["current_sign_in_ip", "113.23.53.204"], ["last_sign_in_ip", "113.23.53.204"], ["sign_in_count", 1], ["updated_at", 2017-05-15 13:28:11 UTC], ["id", 1]]
+  [1m[35m (20.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/
+Completed 302 Found in 196ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:28:11 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (38.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (2.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 164ms (Views: 121.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1" for 113.23.53.204 at 2017-05-15 13:28:13 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 170ms (Views: 161.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 113.23.53.204 at 2017-05-15 13:28:15 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (17.9ms)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/searches?email=a" for 113.23.53.204 at 2017-05-15 13:28:20 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchesController#index as HTML
+  Parameters: {"email"=>"a"}
+  Rendering searches/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(email) LIKE '%a%') ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 10], ["LIMIT", 1]]
+  Rendered searches/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 121ms (Views: 114.2ms | ActiveRecord: 3.3ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:30:25 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/ubuntu/workspace/app/controllers/application_controller.rb:5)
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (88.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (3.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (97.3ms)
+Completed 200 OK in 754ms (Views: 583.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 113.23.53.204 at 2017-05-15 13:30:28 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (27.2ms)
+Completed 200 OK in 38ms (Views: 32.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/searches?email=a" for 113.23.53.204 at 2017-05-15 13:30:30 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchesController#index as HTML
+  Parameters: {"email"=>"a"}
+  Rendering searches/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(email) LIKE '%a%') ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered searches/index.html.erb within layouts/application (1140.8ms)
+Completed 200 OK in 1242ms (Views: 1232.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/searches?email=a&page=2" for 113.23.53.204 at 2017-05-15 13:30:35 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchesController#index as HTML
+  Parameters: {"email"=>"a", "page"=>"2"}
+  Rendering searches/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(email) LIKE '%a%') ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered searches/index.html.erb within layouts/application (203.5ms)
+Completed 200 OK in 289ms (Views: 283.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/14" for 113.23.53.204 at 2017-05-15 13:30:40 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 14]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 14], ["LIMIT", 1]]
+  Rendered users/_follow.html.erb (2.4ms)
+  Rendered users/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 214ms (Views: 206.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/relationships" for 113.23.53.204 at 2017-05-15 13:30:48 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:RelationshipsController> at /home/ubuntu/workspace/app/controllers/relationships_controller.rb:2)
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"13", "commit"=>"Follow"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 1], ["followed_id", 13], ["created_at", 2017-05-15 13:30:48 UTC], ["updated_at", 2017-05-15 13:30:48 UTC]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 13], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 13], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (7.5ms)
+  Rendered relationships/create.js.erb (14.0ms)
+Completed 200 OK in 42ms (Views: 18.7ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/relationships" for 113.23.53.204 at 2017-05-15 13:30:50 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"14", "commit"=>"Follow"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 1], ["followed_id", 14], ["created_at", 2017-05-15 13:30:50 UTC], ["updated_at", 2017-05-15 13:30:50 UTC]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 14], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 14], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (1.8ms)
+  Rendered relationships/create.js.erb (7.0ms)
+Completed 200 OK in 40ms (Views: 15.5ms | ActiveRecord: 14.6ms)
+
+
+Started POST "/relationships" for 113.23.53.204 at 2017-05-15 13:30:52 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"15", "commit"=>"Follow"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 1], ["followed_id", 15], ["created_at", 2017-05-15 13:30:52 UTC], ["updated_at", 2017-05-15 13:30:52 UTC]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 15], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (72.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 15], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (1.7ms)
+  Rendered relationships/create.js.erb (77.4ms)
+Completed 200 OK in 108ms (Views: 82.6ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/users/15" for 113.23.53.204 at 2017-05-15 13:30:58 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 15], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 15], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (3.3ms)
+  Rendered users/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 199ms (Views: 193.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:33:59 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/ubuntu/workspace/app/controllers/application_controller.rb:5)
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (15.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (1.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 160ms (Views: 90.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/posts" for 113.23.53.204 at 2017-05-15 13:34:20 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /home/ubuntu/workspace/app/controllers/posts_controller.rb:2)
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XinlZaOGt1W9ZwOc94srabtWR8COVgd2syrav5iYm8fR9O27fUOsGbN71G+jny0lBVKHgqWaAg7fWlc4vBgPRg==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f0bec9de668 @tempfile=#<Tempfile:/tmp/RackMultipart20170515-6739-c9wqsl.jpg>, @original_filename="Beautiful Indian Girls Wallpapers for Desktop Image 4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Beautiful Indian Girls Wallpapers for Desktop Image 4.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>""}, "commit"=>"Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/b345ebb229aa2fe552023a1db16b743520170515-6739-1cebn4.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-6739-1ibp3vg.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-6739-1ibp3vg.jpg[0]'
+Command :: convert '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-6739-1ibp3vg.jpg[0]' -auto-orient -resize "500x500>" '/tmp/2ad2e0b90089f51d9d609608c21a3bee20170515-6739-stpdsj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-6739-1ibp3vg.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-6739-1ibp3vg.jpg[0]'
+Command :: convert '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-6739-1ibp3vg.jpg[0]' -auto-orient -resize "100x100>" '/tmp/2ad2e0b90089f51d9d609608c21a3bee20170515-6739-1azxi9a'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/b345ebb229aa2fe552023a1db16b743520170515-6739-1g24ngy.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", ""], ["created_at", 2017-05-15 13:34:20 UTC], ["updated_at", 2017-05-15 13:34:20 UTC], ["image_file_name", "Beautiful_Indian_Girls_Wallpapers_for_Desktop_Image_4.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 152365], ["image_updated_at", 2017-05-15 13:34:20 UTC], ["user_id", 1]]
+  [1m[35m (16.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/posts/1
+Completed 302 Found in 361ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/posts/1" for 113.23.53.204 at 2017-05-15 13:34:20 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.2ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 89ms (Views: 73.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:34:27 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (11.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [1 times] (6.9ms)
+  Rendered shared/_feed.html.erb (19.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (32.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (The @static_pages variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    2:   <ol class="posts">
+    3:     <%= render @feed_items %>
+    4:   </ol>
+    5:   <%= will_paginate %>
+    6: <% end %>
+  
+app/views/shared/_feed.html.erb:5:in `_app_views_shared__feed_html_erb__3995523001304502235_69844600444920'
+app/views/static_pages/home.html.erb:7:in `_app_views_static_pages_home_html_erb__92966790085157551_69844593333880'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.6ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /usr/local/rvm/gems/ruby-2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:35:24 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (9.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [1 times] (5.9ms)
+  Rendered shared/_feed.html.erb (134.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (146.7ms)
+Completed 200 OK in 249ms (Views: 239.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/posts" for 113.23.53.204 at 2017-05-15 13:37:11 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/ubuntu/workspace/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /home/ubuntu/workspace/app/controllers/posts_controller.rb:2)
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6V2B02p6L0t4/1exIKPkLjPryvr3OS5NibHXvpskfXlmgIkNtL80B3bjgEJ0t+Jije8KuNz1KzXlwVo5v6Tp+A==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000003a00700 @tempfile=#<Tempfile:/tmp/RackMultipart20170515-6739-s6dhbo.jpg>, @original_filename="beautiful-girl-16.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"beautiful-girl-16.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"asd"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-14syht8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-ezdsq6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-ezdsq6.jpg[0]'
+Command :: convert '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-ezdsq6.jpg[0]' -auto-orient -resize "500x500>" '/tmp/bf4d6e23c17f95376d300b6baadff9a220170515-6739-9p2yz8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-ezdsq6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-ezdsq6.jpg[0]'
+Command :: convert '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-ezdsq6.jpg[0]' -auto-orient -resize "100x100>" '/tmp/bf4d6e23c17f95376d300b6baadff9a220170515-6739-1urxwsr'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/a42b2b0bae46eae5e711d7e8bfae759020170515-6739-vqtpig.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", "asd"], ["created_at", 2017-05-15 13:37:11 UTC], ["updated_at", 2017-05-15 13:37:11 UTC], ["image_file_name", "beautiful-girl-16.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 77203], ["image_updated_at", 2017-05-15 13:37:11 UTC], ["user_id", 1]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/posts/2
+Completed 302 Found in 327ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/posts/2" for 113.23.53.204 at 2017-05-15 13:37:12 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.3ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 85ms (Views: 70.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:37:40 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (23.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [2 times] (9.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (16.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 129ms (Views: 122.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/posts" for 113.23.53.204 at 2017-05-15 13:38:03 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xg0BkpiaTLB8svX+ctzoqk7RTKuvLotPsjiPCp4FwqxJ0AlMRl9X/HKuIg0myO7m8NWM6YTijjfeSAKNuoVWLQ==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f0bec351408 @tempfile=#<Tempfile:/tmp/RackMultipart20170515-6739-1g1f1tt.jpg>, @original_filename="beautiful-girl-17.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"beautiful-girl-17.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>""}, "commit"=>"Post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-2otyh2.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-14bska5.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-14bska5.jpg[0]'
+Command :: convert '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-14bska5.jpg[0]' -auto-orient -resize "500x500>" '/tmp/6cd7216ff86cfb3b7136fa16040befe720170515-6739-1vg331w'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-14bska5.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-14bska5.jpg[0]'
+Command :: convert '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-14bska5.jpg[0]' -auto-orient -resize "100x100>" '/tmp/6cd7216ff86cfb3b7136fa16040befe720170515-6739-1t5orvl'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/ed44071092e71fc7f60b523fc14cad6220170515-6739-11j67et.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", ""], ["created_at", 2017-05-15 13:38:04 UTC], ["updated_at", 2017-05-15 13:38:04 UTC], ["image_file_name", "beautiful-girl-17.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 71515], ["image_updated_at", 2017-05-15 13:38:03 UTC], ["user_id", 1]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/posts/3
+Completed 302 Found in 318ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/posts/3" for 113.23.53.204 at 2017-05-15 13:38:04 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.3ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 79ms (Views: 75.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 13:38:08 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  Rendered shared/_left_block.html.erb (10.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [2 times] (67.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 1) OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (73.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 192ms (Views: 183.2ms | ActiveRecord: 2.0ms)
+
+

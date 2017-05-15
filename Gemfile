@@ -6,7 +6,9 @@ gem 'rails', '5.0.2'
 gem 'devise'
 gem 'paperclip', '~> 5.0.0'
 gem 'bootstrap-sass','~>3.3.5'
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'faker',          '1.6.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
