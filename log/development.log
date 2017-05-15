@@ -9100,3 +9100,4 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 94ms (Views: 87.5ms | ActiveRecord: 1.1ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
