@@ -9923,3 +9923,268 @@ app/controllers/relationships_controller.rb:6:in `create'
   Rendered /home/anh/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
   Rendered /home/anh/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (33.8ms)
 DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/anh/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/workspace/app/models/user.rb:1)
+Started GET "/users/sign_in" for 113.23.53.204 at 2017-05-15 12:47:12 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/ubuntu/workspace/app/controllers/application_controller.rb:5)
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 3482ms (Views: 3428.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-08f7d2685b77e2854df15e0d89200cfb3b1b3c90519a841d8e49ee509786c16f.css?body=1" for 113.23.53.204 at 2017-05-15 12:47:17 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started POST "/users/sign_in" for 113.23.53.204 at 2017-05-15 12:47:21 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U1fsos7GW9Dn4alCJ4Rxa/d3cit+QjXoL8k3pmqEBXN9wQWe6z6IRCEZO9ghX8aH8a0ys22+KUB4SM5HQzwrFg==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-15 12:47:21 UTC], ["current_sign_in_ip", "113.23.53.204"], ["sign_in_count", 2], ["updated_at", 2017-05-15 12:47:21 UTC], ["id", 2]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/
+Completed 302 Found in 306ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 12:47:21 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  Rendered shared/_left_block.html.erb (61.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 2) OR user_id = 2)[0m
+  Rendered shared/_feed.html.erb (2.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 240ms (Views: 167.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 113.23.53.204 at 2017-05-15 12:47:26 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (3.7ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searches?email=a" for 113.23.53.204 at 2017-05-15 12:47:27 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchesController#index as HTML
+  Parameters: {"email"=>"a"}
+  Rendering searches/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(email) LIKE '%a%') ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 3], ["LIMIT", 1]]
+  Rendered searches/index.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 243ms (Views: 237.5ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/relationships/1" for 113.23.53.204 at 2017-05-15 12:47:31 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:RelationshipsController> at /home/ubuntu/workspace/app/controllers/relationships_controller.rb:2)
+Processing by RelationshipsController#destroy as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Unfollow", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = 1[0m  [["follower_id", 2]]
+  [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/destroy.js.erb
+  Rendered users/_follow.html.erb (2.5ms)
+  Rendered users/_follow.html.erb (1.3ms)
+  Rendered relationships/destroy.js.erb (7.4ms)
+Completed 200 OK in 51ms (Views: 14.1ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/relationships" for 113.23.53.204 at 2017-05-15 12:47:33 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 2], ["followed_id", 1], ["created_at", 2017-05-15 12:47:33 UTC], ["updated_at", 2017-05-15 12:47:33 UTC]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 1], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 1], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (1.9ms)
+  Rendered relationships/create.js.erb (7.9ms)
+Completed 200 OK in 36ms (Views: 11.5ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/relationships" for 113.23.53.204 at 2017-05-15 12:47:35 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"3", "commit"=>"Follow"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 2], ["followed_id", 3], ["created_at", 2017-05-15 12:47:35 UTC], ["updated_at", 2017-05-15 12:47:35 UTC]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 3], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 3], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (1.6ms)
+  Rendered relationships/create.js.erb (9.2ms)
+Completed 200 OK in 124ms (Views: 16.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/users/3" for 113.23.53.204 at 2017-05-15 12:47:38 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 3], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (3.2ms)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 141ms (Views: 135.5ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/relationships/13" for 113.23.53.204 at 2017-05-15 12:47:40 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RelationshipsController#destroy as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Unfollow", "id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = 3[0m  [["follower_id", 2]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/destroy.js.erb
+  Rendered users/_follow.html.erb (2.0ms)
+  Rendered users/_follow.html.erb (1.0ms)
+  Rendered relationships/destroy.js.erb (5.7ms)
+Completed 200 OK in 33ms (Views: 10.5ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/relationships" for 113.23.53.204 at 2017-05-15 12:47:42 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"3", "commit"=>"Follow"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 2], ["followed_id", 3], ["created_at", 2017-05-15 12:47:42 UTC], ["updated_at", 2017-05-15 12:47:42 UTC]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 3], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (3.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 2], ["followed_id", 3], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (1.9ms)
+  Rendered relationships/create.js.erb (9.5ms)
+Completed 200 OK in 113ms (Views: 90.3ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 12:47:43 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  Rendered shared/_left_block.html.erb (7.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 2) OR user_id = 2)[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 2) OR user_id = 2) ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [1 times] (5.8ms)
+  Rendered shared/_feed.html.erb (162.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (173.1ms)
+Completed 200 OK in 258ms (Views: 249.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 113.23.53.204 at 2017-05-15 12:47:50 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  Rendered shared/_left_block.html.erb (8.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 2) OR user_id = 2)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 2) OR user_id = 2) ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [1 times] (4.1ms)
+  Rendered shared/_feed.html.erb (7.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 138ms (Views: 132.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/posts" for 113.23.53.204 at 2017-05-15 12:48:28 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /home/ubuntu/workspace/app/controllers/posts_controller.rb:2)
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kEiGrVArHlXhKexJRHX650sFQxyJp25A/rcxbWZR1Np53kCL1xn2qjHrqKTv+xFZsaGTiB0ELut0OUjmfFJmw==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb7e9e7ea48 @tempfile=#<Tempfile:/tmp/RackMultipart20170515-3638-gnbsns.jpg>, @original_filename="Beautiful Indian Girls Wallpapers for Desktop Image 4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Beautiful Indian Girls Wallpapers for Desktop Image 4.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>""}, "commit"=>"Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/b345ebb229aa2fe552023a1db16b743520170515-3638-spi82y.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-3638-1vqc1ie.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-3638-1vqc1ie.jpg[0]'
+Command :: convert '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-3638-1vqc1ie.jpg[0]' -auto-orient -resize "500x500>" '/tmp/cb2370e4526f9f49e20dc6bf323f42f420170515-3638-h0vevz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-3638-1vqc1ie.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-3638-1vqc1ie.jpg[0]'
+Command :: convert '/tmp/95bcddcb9bb3714fc0d04856f07ad5a920170515-3638-1vqc1ie.jpg[0]' -auto-orient -resize "100x100>" '/tmp/cb2370e4526f9f49e20dc6bf323f42f420170515-3638-j28ypr'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/b345ebb229aa2fe552023a1db16b743520170515-3638-1o3cx0.jpg'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", ""], ["created_at", 2017-05-15 12:48:28 UTC], ["updated_at", 2017-05-15 12:48:28 UTC], ["image_file_name", "Beautiful_Indian_Girls_Wallpapers_for_Desktop_Image_4.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 152365], ["image_updated_at", 2017-05-15 12:48:28 UTC], ["user_id", 2]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/posts/2
+Completed 302 Found in 432ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/posts/2" for 113.23.53.204 at 2017-05-15 12:48:29 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.2ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 147ms (Views: 128.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/post_comments" for 113.23.53.204 at 2017-05-15 12:48:37 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VB87qKnKF4vjHBQdAVk+5e7XCuug/QYRAhG90AcsOajjuWCwM9bcKBxfHQ639wVLFT2ZqfKvixOsO4Q2K0Q3YA==", "post_comment"=>{"comment"=>"asdiasd", "post_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "post_comments" ("user_id", "post_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["post_id", 2], ["comment", "asdiasd"], ["created_at", 2017-05-15 12:48:37 UTC], ["updated_at", 2017-05-15 12:48:37 UTC]]
+  [1m[35m (22.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://beautiful-sonvuhuu18.c9users.io/posts/2
+Completed 302 Found in 31ms (ActiveRecord: 23.5ms)
+
+
+Started GET "/posts/2" for 113.23.53.204 at 2017-05-15 12:48:38 +0000
+Cannot render console from 113.23.53.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.3ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 107ms (Views: 102.5ms | ActiveRecord: 0.9ms)
+
+

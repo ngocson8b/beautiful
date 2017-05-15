@@ -9,7 +9,7 @@
 		<div class="followers-num"><%=@user.followers.size%> followers</div>
 		<div class="following-num"><%=@user.following.size%> followings</div>
 	</div>
-	<div class="config-btn">
+	<div class="config-btn" id="profile_follow">
 		<% if @user.id == current_user.id%>
 			<%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-default" %>
 		<% else %>
