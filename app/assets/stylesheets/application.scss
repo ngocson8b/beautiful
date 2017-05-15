@@ -115,3 +115,61 @@
     }
   }
 }
+div.post{
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	display: inline-block;
+	box-shadow: 0 1px 1px 1px #dedede;
+	.post-info{
+		padding: 15px 15px;
+		display: inline-block;
+		width: 100%;
+		.avatar{
+			border-radius: 50%;
+			float: left;
+			width: 50px;
+			height: 50px;
+		}
+		.user-mail{
+			float: left;
+			margin-left: 10px;
+			margin-top: 15px;
+		}
+		.timestamp{
+			float: right;
+			display: inline-block;
+			margin-top: 15px;
+		}
+	}
+	.content{
+		width: 100%;
+		text-align: left;
+		padding: 15px;
+	}
+	.comment-path{
+		padding: 15px 15px;
+		width: 100%;
+		.comments-list{
+			display: inline-block;
+			width: 100%;
+			.comment{
+				float: left;
+				width: 100%;
+				text-align: left;
+				.comment-content{
+					margin-left: 10px;
+					display: inline-block;
+				}
+			}
+		}
+		.new_post_comment{
+			input{
+				border: none;
+				width: 100%;
+				&:focus{
+					outline: 0;
+				}
+			}
+		}
+	}
+}
