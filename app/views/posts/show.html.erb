@@ -17,7 +17,7 @@
 			<% @post.post_comment.each do |comment|%>
 				<div class="comment">
 					<% user = User.find(comment.user_id) %>
-					<b><%= user.name %></b>
+					<b><%= link_to user.name, user_path(user) %></b>
 					<div class="comment-content">
 						<%= comment.comment %>
 					</div>

@@ -107,3 +107,7 @@ form #result-box > a:hover {color: black; background-color: #eee; text-decoratio
   padding-left: 5px;
   vertical-align: middle;
 }
+.comment a:hover{
+  text-decoration:none;
+  background-color:inherit;
+}
