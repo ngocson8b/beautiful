@@ -4,7 +4,12 @@
   <div class="body">
     <%= image_tag(current_user.avatar.url(:thumb)) %>
     <h4 class="user-mail"><%= current_user.name%></h4>
-    <h4><%= current_user.followers.size%> followers | <%=current_user.following.size%> followings</h4>
+    <h4><%= current_user.followers.size%> followers | <a href="<%= following_user_path(current_user) %>">
+        	<strong id="following" class="stat">
+        	<%= current_user.following.count %>
+    		</strong>
+    		following
+  	</a></h4>
     <%= form_for @post, html: {multipart: true} do |f| %>
         <%= f.file_field :image %>
         <br>

@@ -6,8 +6,13 @@
 		<div class="name"><%=@user.name%></div>
 		<div class="email"><%=@user.email%></div>
 		<div class="posts-num"><%= @user_posts.size %> posts</div>
-		<div class="followers-num"><%=@user.followers.size%> followers</div>
-		<div class="following-num"><%=@user.following.size%> followings</div>
+		<div class="followers-num" id="followers-num"><%=@user.followers.size%> followers</div>
+		<a href="<%= following_user_path(@user) %>">
+        	<strong id="following" class="stat">
+        	<%= @user.following.count %>
+    		</strong>
+    		following
+  		</a>
 	</div>
 	<div class="config-btn" id="profile_follow">
 		<% if @user.id == current_user.id%>

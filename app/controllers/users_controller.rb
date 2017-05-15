@@ -4,6 +4,18 @@ class UsersController < ApplicationController
     @user_posts = @user.posts
   end
   
+  def following
+    @user  = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page], per_page: 10)
+    render 'show_follow'
+  end
+
+  def followers
+    @user  = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page], per_page: 10)
+    render 'show_follow'
+  end
+  
   def live_search
 		if(params[:email])
 		    @users = User.where("lower(email) LIKE ?", '%' + params[:email].downcase + '%')

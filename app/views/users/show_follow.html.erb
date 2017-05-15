@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-hover custab">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <% @users.each do |user| %>
+            <tr>
+                <td><%= link_to(user.email, user_path(user)) %></td>
+                <td><%= user.name%></td>
+            </tr>
+         <% end %> 
+        </table>
+        <%= link_to "Back", :back ,class: "btn btn-default" %>
+    </div>
+</div>
