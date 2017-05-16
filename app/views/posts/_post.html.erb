@@ -8,5 +8,8 @@
   </div>
   <span class="image">
     <%= link_to image_tag(post.image.url(:medium), alt: "image", class: "img-responsive"), post_path(post) %></span><br>
+<div id="post_<%= post.id %>_likes">
+        <%= render "likes/likes", post: post %>
+      </div>
   <span class="content"><%= post.description %></span>
 </li>

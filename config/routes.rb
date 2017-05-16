@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
     get '/users/:id', :to => 'users#show', :as => :user
   end
+  get '/user/:id' => 'users#show'
+  resources :posts do
+    resource :like
+    end
   resources :users
   resources :users do
     member do

@@ -9,6 +9,15 @@ class PostsController < ApplicationController
     @post = Post.all
   end
 
+  def upvote
+    if !current_user.liked? @post
+      @post.liked_by current_user
+    elsif current_user.liked? @post
+      #as the above method can also result nil if he is yet to vote
+      @post.unliked_by current_user 
+    end
+  end 
+  
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new

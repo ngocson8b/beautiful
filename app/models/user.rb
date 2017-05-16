@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :likes
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   
@@ -23,6 +24,10 @@ class User < ActiveRecord::Base
   # Unfollows a user.
   def unfollow(other_user)
     following.delete(other_user)
+  end
+  
+  def likes?(post)
+    post.likes.where(user_id: id).any?
   end
 
   # Returns true if the current user is following the other user.
