@@ -12553,3 +12553,1603 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 255ms (Views: 247.7ms | ActiveRecord: 1.8ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/anh/ruby/beautiful/app/models/user.rb:1)
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:00:09 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/anh/ruby/beautiful/app/controllers/application_controller.rb:5)
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3226ms (Views: 3201.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:00:13 +0700
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:00:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (497.8ms)
+Completed 200 OK in 636ms (Views: 576.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:00:34 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IWIOAXi5Y9A9D5dG7cS3sSopRDIE3z3U3GZTH5ZLypJxuhxV7zv1EgxcrakW02IYilF7drxRjX0PmDGVTGovbw==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IWIOAXi5Y9A9D5dG7cS3sSopRDIE3z3U3GZTH5ZLypJxuhxV7zv1EgxcrakW02IYilF7drxRjX0PmDGVTGovbw==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 440ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:00:46 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+1MyNUW8LZn+Skm+8Hj9Y3AUgtWpqtBJvJAkdZZxK+7NV6cQpRmdFaqE8kA1jZcLbhtT+4oG+j1DCIbDHghUg==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+1MyNUW8LZn+Skm+8Hj9Y3AUgtWpqtBJvJAkdZZxK+7NV6cQpRmdFaqE8kA1jZcLbhtT+4oG+j1DCIbDHghUg==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 356ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:00:51 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6aImkqe9+H4tKzm3v2w7GufiKDxxky/UxtJdAP46mc+5ejTGMD9uvBx4A1hEe+6zR5oXeMkdn30VLD+KJBt8Mg==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6aImkqe9+H4tKzm3v2w7GufiKDxxky/UxtJdAP46mc+5ejTGMD9uvBx4A1hEe+6zR5oXeMkdn30VLD+KJBt8Mg==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 347ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:00:57 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 174ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-05-16 09:01:25 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQtTPHc3v/KpUUFkTGfUqhN/JXQQ1HV3sWuiCPB8ONt500Fo4LUpMJgCe4u3cAEDswcaMKhaxd5ilcCCKl3dJg==", "user"=>{"name"=>"Viet Anh Nguyen", "email"=>"abc@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "abc@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "abc@gmail.com"], ["encrypted_password", "$2a$11$VBwrD684r2kEPK2keUSgsunuzUgf20cbNkmgScUv4Ob3O4aQp7beW"], ["created_at", 2017-05-16 02:01:25 UTC], ["updated_at", 2017-05-16 02:01:25 UTC], ["name", "Viet Anh Nguyen"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-05-16 02:01:25 UTC], ["last_sign_in_at", 2017-05-16 02:01:25 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-05-16 02:01:25 UTC], ["id", 101]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 316ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:01:25 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (37.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  Rendered shared/_feed.html.erb (3.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 175ms (Views: 109.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 09:01:39 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (11.5ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/undefined/live_search?email=a%40" for 127.0.0.1 at 2017-05-16 09:01:39 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a@", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a@%')[0m
+  Rendered users/live_search.js.erb (10.5ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/undefined/live_search?email=a%40" for 127.0.0.1 at 2017-05-16 09:01:39 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a@", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a@%')[0m
+  Rendered users/live_search.js.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 09:01:40 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (8.0ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 09:01:41 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (5.6ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-05-16 09:01:51 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 101], ["id", 4], ["LIMIT", 1]]
+  Rendered users/_follow.html.erb (4.4ms)
+  Rendered users/show.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 132ms (Views: 126.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/relationships" for 127.0.0.1 at 2017-05-16 09:01:58 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:RelationshipsController> at /home/anh/ruby/beautiful/app/controllers/relationships_controller.rb:2)
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"4", "commit"=>"Follow"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 101], ["followed_id", 4], ["created_at", 2017-05-16 02:01:58 UTC], ["updated_at", 2017-05-16 02:01:58 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 101], ["followed_id", 4], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 101], ["followed_id", 4], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (3.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 4]]
+  Rendered relationships/create.js.erb (26.4ms)
+Completed 200 OK in 51ms (Views: 32.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:02:03 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (11.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  Rendered shared/_feed.html.erb (1.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 86ms (Views: 81.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 09:02:07 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (10.4ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-05-16 09:02:10 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 101], ["id", 1], ["LIMIT", 1]]
+  Rendered users/_follow.html.erb (1.7ms)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 97ms (Views: 92.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/relationships" for 127.0.0.1 at 2017-05-16 09:02:12 +0700
+Processing by RelationshipsController#create as JS
+  Parameters: {"utf8"=>"✓", "followed_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["follower_id", 101], ["followed_id", 1], ["created_at", 2017-05-16 02:02:12 UTC], ["updated_at", 2017-05-16 02:02:12 UTC]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering relationships/create.js.erb
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 101], ["followed_id", 1], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 101], ["followed_id", 1], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered relationships/create.js.erb (11.1ms)
+Completed 200 OK in 38ms (Views: 20.2ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:02:15 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (29.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (39.7ms)
+  Rendered shared/_feed.html.erb (45.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 156ms (Views: 146.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/101/following" for 127.0.0.1 at 2017-05-16 09:02:26 +0700
+Processing by UsersController#following as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? LIMIT ? OFFSET ?[0m  [["follower_id", 101], ["LIMIT", 10], ["OFFSET", 0]]
+  Rendered users/show_follow.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/101" for 127.0.0.1 at 2017-05-16 09:03:25 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:04:03 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (9.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (11.5ms)
+  Rendered shared/_feed.html.erb (13.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 114ms (Views: 110.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/101" for 127.0.0.1 at 2017-05-16 09:04:13 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 76ms (Views: 71.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit.101" for 127.0.0.1 at 2017-05-16 09:04:17 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2017-05-16 09:05:30 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:05:51 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (7.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (12.4ms)
+  Rendered shared/_feed.html.erb (17.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 104ms (Views: 99.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-16 09:11:37 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JpVY5dwN+/NH5VPcZOkvK78mJObIlZlyoE0FdF/gXsp2TUqxS49tMXa2aTOf/vqCH14bonAbKdtzs2f+hcG7Nw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:11:37 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:11:41 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 126ms (Views: 121.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:11:50 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:14:02 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 129ms (Views: 127.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:14:03 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:15:25 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 130ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:15:26 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:17:05 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 82ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:17:06 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:51 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:18:52 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 84ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:00 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:01 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:21:05 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:21:06 +0700
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:22:58 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 109ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:23:06 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4yb4m2ac0fTHutuENTkhMk4+G0CDStKA7gWh+id+T66pWVj9jHkJkd2Pi60WwQGzlkSmaZwz8W2fBlUPDWbjew==", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "abc@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-16 02:23:06 UTC], ["sign_in_count", 2], ["updated_at", 2017-05-16 02:23:06 UTC], ["id", 101]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 277ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:23:06 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (15.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (11.7ms)
+  Rendered shared/_feed.html.erb (14.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 132ms (Views: 120.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/101" for 127.0.0.1 at 2017-05-16 09:23:12 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit.101" for 127.0.0.1 at 2017-05-16 09:23:19 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 72.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-16 09:29:25 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2TfKJIOuXFjHF4TFJdRE2HOdpEXg8uuYgskzJm35ZX137EEuvHrehR+hI2irHBMGXS2+KZoIs2TGa0PZFKSM3Q=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:29:25 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:29:31 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:29:45 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (5.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:35:25 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:40:01 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 74ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:26 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 74ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:28 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:40:30 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:07 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:41:08 +0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:42:30 +0700
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:42:58 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:44:14 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 67ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:44:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 85ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:45 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:55:46 +0700
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 90ms (Views: 89.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:40 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:56:41 +0700
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 78ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-c4b9b9d945262dddaa02b083bc5179245d1aac2bd56d5c67c7099fdbee341d9d.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/post_comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/scaffolds.self-9e40cf4b7b696d2d113249a4f1c8929b4d0e897e039787b1495b440ba230c464.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/searches.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/post_comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/application.self-22d64755dfe31d0b40011d85597666c806d073d821c774b3ad9b1cb9eb8fa045.css?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/searchbox.self-48a8e61745f260e44a62843444bae8d3ec981024b9c7a851bb939dc2ee59810f.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/searches.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2017-05-16 09:57:08 +0700
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-16 09:57:31 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XidFgOC6JkIxjwZQ00zmrfB7BS0EsW5vdU+Q2tOvCw/1ZkiInQIRlAbh6GdpYBeFbjOfo5HBAH6k7TMC9zLQ4Q==", "user"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "abc@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-16 02:57:31 UTC], ["last_sign_in_at", 2017-05-16 02:23:06 UTC], ["sign_in_count", 3], ["updated_at", 2017-05-16 02:57:31 UTC], ["id", 101]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 284ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 09:57:31 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (10.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (10.5ms)
+  Rendered shared/_feed.html.erb (18.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 107ms (Views: 102.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/101" for 127.0.0.1 at 2017-05-16 09:57:44 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit.101" for 127.0.0.1 at 2017-05-16 09:57:50 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2017-05-16 10:07:54 +0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ej0P9jettvovjZrPG7/08lHsdbtk1LbhJeYI57e1xC5CboIrLZSV/Wy8FzjvyfD9Zq0XgwFC7XjajhddWIcfyg==", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f3ef6072650 @tempfile=#<Tempfile:/tmp/RackMultipart20170516-15215-duv0kz.jpg>, @original_filename="havy.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"havy.jpg\"\r\nContent-Type: image/jpeg\r\n">, "email"=>"abc@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-1yd5kcn.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-zmc01r.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-zmc01r.jpg[0]'
+Command :: convert '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-zmc01r.jpg[0]' -auto-orient -resize "300x300>" '/tmp/9dae0e8381a359ba9dd4ae165a7cba5320170516-15215-14wsj0g'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-zmc01r.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-zmc01r.jpg[0]'
+Command :: convert '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-zmc01r.jpg[0]' -auto-orient -resize "50x" -crop "50x50+0+8" +repage '/tmp/9dae0e8381a359ba9dd4ae165a7cba5320170516-15215-13zti50'
+Command :: file -b --mime '/tmp/1a21b52cbd1e143b36d36bb1a0c964a120170516-15215-148ltzy.jpg'
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "avatar_file_name" = ?, "avatar_content_type" = ?, "avatar_file_size" = ?, "avatar_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["avatar_file_name", "havy.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 104387], ["avatar_updated_at", 2017-05-16 03:07:54 UTC], ["updated_at", 2017-05-16 03:07:54 UTC], ["id", 101]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 706ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 10:07:54 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (20.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (4.2ms)
+  Rendered shared/_feed.html.erb (11.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 105ms (Views: 98.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-05-16 10:08:02 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 101], ["id", 1], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 101], ["followed_id", 1], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (1.9ms)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 115ms (Views: 108.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 10:08:12 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (6.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (15.6ms)
+  Rendered shared/_feed.html.erb (20.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 101ms (Views: 95.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/101/following" for 127.0.0.1 at 2017-05-16 10:09:18 +0700
+Processing by UsersController#following as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? LIMIT ? OFFSET ?[0m  [["follower_id", 101], ["LIMIT", 10], ["OFFSET", 0]]
+  Rendered users/show_follow.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 10:09:24 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (13.6ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=a%40" for 127.0.0.1 at 2017-05-16 10:09:24 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a@", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a@%')[0m
+  Rendered users/live_search.js.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=a%40" for 127.0.0.1 at 2017-05-16 10:09:24 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a@", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a@%')[0m
+  Rendered users/live_search.js.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=a%40%3D" for 127.0.0.1 at 2017-05-16 10:09:26 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a@=", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a@=%')[0m
+  Rendered users/live_search.js.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=a%40" for 127.0.0.1 at 2017-05-16 10:09:26 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a@", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a@%')[0m
+  Rendered users/live_search.js.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 10:09:27 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (11.6ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/undefined/live_search?email=b" for 127.0.0.1 at 2017-05-16 10:09:29 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"b", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%b%')[0m
+  Rendered users/live_search.js.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/undefined/live_search?email=bh" for 127.0.0.1 at 2017-05-16 10:09:29 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"bh", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%bh%')[0m
+  Rendered users/live_search.js.erb (0.9ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=b" for 127.0.0.1 at 2017-05-16 10:09:30 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"b", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%b%')[0m
+  Rendered users/live_search.js.erb (2.6ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/undefined/live_search?email=V" for 127.0.0.1 at 2017-05-16 10:09:32 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"V", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%v%')[0m
+  Rendered users/live_search.js.erb (1.1ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=V" for 127.0.0.1 at 2017-05-16 10:09:32 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"V", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%v%')[0m
+  Rendered users/live_search.js.erb (4.8ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=N" for 127.0.0.1 at 2017-05-16 10:09:35 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"N", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%n%')[0m
+  Rendered users/live_search.js.erb (1.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=N" for 127.0.0.1 at 2017-05-16 10:09:35 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"N", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%n%')[0m
+  Rendered users/live_search.js.erb (3.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=Ngu" for 127.0.0.1 at 2017-05-16 10:09:35 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"Ngu", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%ngu%')[0m
+  Rendered users/live_search.js.erb (5.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=Nguy" for 127.0.0.1 at 2017-05-16 10:09:35 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"Nguy", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%nguy%')[0m
+  Rendered users/live_search.js.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=Nguy" for 127.0.0.1 at 2017-05-16 10:09:35 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"Nguy", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%nguy%')[0m
+  Rendered users/live_search.js.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=Ngu" for 127.0.0.1 at 2017-05-16 10:09:36 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"Ngu", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%ngu%')[0m
+  Rendered users/live_search.js.erb (3.9ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=Ng" for 127.0.0.1 at 2017-05-16 10:09:36 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"Ng", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%ng%')[0m
+  Rendered users/live_search.js.erb (1.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=N" for 127.0.0.1 at 2017-05-16 10:09:36 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"N", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%n%')[0m
+  Rendered users/live_search.js.erb (6.9ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/undefined/live_search?email=X" for 127.0.0.1 at 2017-05-16 10:09:38 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"X", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%x%')[0m
+  Rendered users/live_search.js.erb (10.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=X" for 127.0.0.1 at 2017-05-16 10:09:38 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"X", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%x%')[0m
+  Rendered users/live_search.js.erb (19.0ms)
+Completed 200 OK in 30ms (Views: 22.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users/undefined/live_search?email=a" for 127.0.0.1 at 2017-05-16 10:09:40 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"a", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (9.7ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/undefined/live_search?email=V" for 127.0.0.1 at 2017-05-16 10:09:46 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"V", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%v%')[0m
+  Rendered users/live_search.js.erb (5.7ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=V" for 127.0.0.1 at 2017-05-16 10:09:47 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"V", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%v%')[0m
+  Rendered users/live_search.js.erb (5.8ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/undefined/live_search?email=Vi" for 127.0.0.1 at 2017-05-16 10:09:47 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"Vi", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%vi%')[0m
+  Rendered users/live_search.js.erb (1.6ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/undefined/live_search?email=V" for 127.0.0.1 at 2017-05-16 10:09:48 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"V", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%v%')[0m
+  Rendered users/live_search.js.erb (1.0ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/undefined/live_search?email=A" for 127.0.0.1 at 2017-05-16 10:09:49 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"A", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (11.2ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/undefined/live_search?email=A" for 127.0.0.1 at 2017-05-16 10:09:49 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"A", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (11.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=A" for 127.0.0.1 at 2017-05-16 10:09:51 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"A", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (11.2ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=A" for 127.0.0.1 at 2017-05-16 10:09:51 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"A", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (10.5ms)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=A" for 127.0.0.1 at 2017-05-16 10:09:51 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"A", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (16.5ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/live_search?email=A" for 127.0.0.1 at 2017-05-16 10:09:52 +0700
+Processing by UsersController#live_search as */*
+  Parameters: {"email"=>"A", "id"=>"undefined"}
+  Rendering users/live_search.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(email) LIKE '%a%')[0m
+  Rendered users/live_search.js.erb (11.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-05-16 10:10:17 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 101], ["id", 4], ["LIMIT", 1]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 101], ["followed_id", 4], ["LIMIT", 1]]
+  Rendered users/_unfollow.html.erb (6.9ms)
+  Rendered users/show.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 104ms (Views: 100.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 10:10:23 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 101]]
+  Rendered shared/_left_block.html.erb (10.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101)[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE (user_id IN (SELECT followed_id FROM relationships WHERE follower_id = 101) OR user_id = 101) ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [3 times] (12.2ms)
+  Rendered shared/_feed.html.erb (16.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 108ms (Views: 101.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2017-05-16 10:10:39 +0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /home/anh/ruby/beautiful/app/controllers/posts_controller.rb:2)
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.1ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 111ms (Views: 90.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-05-16 10:10:45 +0700
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VDBlqqpymiacdc3U2oNrCsZEpb4+2Xg5NZGzH3J6cBRsY+h3sEu5Id9EQCMu9W8F8QXHhltPI6DK+aylnUir8A==", "post_comment"=>{"comment"=>"jkjhkhoio", "post_id"=>"3"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "post_comments" ("user_id", "post_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 101], ["post_id", 3], ["comment", "jkjhkhoio"], ["created_at", 2017-05-16 03:10:45 UTC], ["updated_at", 2017-05-16 03:10:45 UTC]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 11ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2017-05-16 10:10:45 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.2ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 93ms (Views: 88.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-05-16 10:10:54 +0700
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4sAHLIPNygno0J9xx76KnO72cwvzuUnLA3eWrb1hUQPak4rxmfTpDqvhEoYzyI6T2bcRM5YvElL8H4kXUlOK5w==", "post_comment"=>{"comment"=>"hihihaha", "post_id"=>"3"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "post_comments" ("user_id", "post_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 101], ["post_id", 3], ["comment", "hihihaha"], ["created_at", 2017-05-16 03:10:54 UTC], ["updated_at", 2017-05-16 03:10:54 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 15ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2017-05-16 10:10:54 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPostComment Load (0.1ms)[0m  [1m[34mSELECT "post_comments".* FROM "post_comments" WHERE "post_comments"."post_id" = ? ORDER BY created_at DESC[0m  [["post_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 84ms (Views: 79.0ms | ActiveRecord: 0.6ms)
+
+
